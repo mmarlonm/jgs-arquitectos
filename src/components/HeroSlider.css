@@ -1,0 +1,210 @@
+/* HeroSlider.css - Efecto 3D Nativo Sierra Negra */
+.container-slider {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 700px;
+  background: #0d0e0f;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .container-slider {
+    height: calc(100vh - 80px);
+    min-height: 750px;
+  }
+}
+
+.slider-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Base 3D Floating Cards */
+.slider-item {
+  width: 105px;
+  height: 155px;
+  position: absolute;
+  top: 60%; /* Marca roja en Mobile */
+  bottom: auto;
+  transform: translate(0, -50%);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .slider-item {
+    width: 200px;
+    height: 300px;
+    top: 60%; /* Marca roja en Desktop */
+    bottom: auto;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  pointer-events: none;
+}
+
+/* Active expanded slide 1 and 2 occupy full screen */
+.slider-slide .slider-item:nth-child(1),
+.slider-slide .slider-item:nth-child(2) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  z-index: 5;
+}
+
+.slider-slide .slider-item:nth-child(1) .item-overlay,
+.slider-slide .slider-item:nth-child(2) .item-overlay {
+  background: 
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.8) 40%,
+      transparent 100%
+    );
+}
+
+/* 3D Floating Cards Positions (Mobile First) */
+.slider-slide .slider-item:nth-child(3) {
+  left: 45vw;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.slider-slide .slider-item:nth-child(4) {
+  left: calc(45vw + 120px);
+  cursor: pointer;
+  z-index: 29;
+}
+
+.slider-slide .slider-item:nth-child(5) {
+  left: calc(45vw + 240px);
+  cursor: pointer;
+  z-index: 28;
+}
+
+.slider-slide .slider-item:nth-child(n + 6) {
+  left: calc(45vw + 360px);
+  opacity: 0;
+  cursor: pointer;
+  z-index: 27;
+}
+
+/* 3D Floating Cards Positions (Desktop) */
+@media (min-width: 768px) {
+  .slider-slide .slider-item:nth-child(3) {
+    left: 55%;
+  }
+  .slider-slide .slider-item:nth-child(4) {
+    left: calc(55% + 220px);
+  }
+  .slider-slide .slider-item:nth-child(5) {
+    left: calc(55% + 440px);
+  }
+  .slider-slide .slider-item:nth-child(n + 6) {
+    left: calc(55% + 660px);
+  }
+}
+
+/* Hover Effect (Glow) */
+.slider-slide .slider-item:nth-child(n + 3) {
+  transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+}
+.slider-slide .slider-item:nth-child(n + 3):hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+/* Contenido Activo (Visible solo en el index 2 que es la imagen principal actual en el array) */
+.slider-item .content-overlay {
+  position: absolute;
+  top: auto;
+  bottom: 85px; 
+  left: 20px;
+  width: 90%; /* Libre para ocupar todo porque las cards están arriba */
+  max-width: 600px;
+  text-align: left;
+  transform: none;
+  display: none;
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .slider-item .content-overlay {
+    bottom: 12%;
+    left: 80px;
+    width: 90%;
+    max-width: 600px;
+  }
+}
+
+.slider-slide .slider-item:nth-child(2) .content-overlay {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animaciones del contenido */
+.content-overlay .anim-title {
+  opacity: 0;
+  animation: animateSlide 1s ease-in-out forwards;
+}
+
+.content-overlay .anim-desc {
+  opacity: 0;
+  animation: animateSlide 1s ease-in-out 0.3s forwards;
+}
+
+.content-overlay .anim-btn {
+  opacity: 0;
+  animation: animateSlide 1s ease-in-out 0.6s forwards;
+}
+
+@keyframes animateSlide {
+  from {
+    opacity: 0;
+    transform: translate(0, 40px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+
+/* Button Controls Footer */
+.button-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 50;
+}

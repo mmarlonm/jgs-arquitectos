@@ -1,0 +1,6 @@
+{
+  "name": "MONOLITH - Estudio de Arquitectura & Modelado 3D Tectónico",
+  "description": "Estudio de arquitectura contemporánea con visor interactivo Three.js de residencias de lujo, catálogo de obras, filosofía tectónica y cotizador de proyectos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
