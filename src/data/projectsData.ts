@@ -10,7 +10,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     year: '2025',
     category: 'modular',
     categoryLabel: 'Arquitectura Modular Industrializada',
-    imageUrl: '/721099171_1894561801234574_4184927469999369895_n.jpg',
+    imageUrl: import.meta.env.BASE_URL + '721099171_1894561801234574_4184927469999369895_n.jpg',
     imageAlt: 'Modularidad Premium: Residencia modular de lujo con cápsulas de hormigón blanco redondeadas, paneles verticales de madera de roble, ventanales panorámicos de vidrio estructural y palmera tropical al atardecer',
     materialHighlight: 'CÁPSULAS GFRC & ROBLE',
     materialColor: 'bg-emerald-400',
@@ -35,8 +35,8 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     has3DModel: true,
     modelKey: 'modular',
     galleryImages: [
-      '/721099171_1894561801234574_4184927469999369895_n.jpg',
-      '/608957458_1388015189531242_8447060198789431145_n.jpg'
+      import.meta.env.BASE_URL + '721099171_1894561801234574_4184927469999369895_n.jpg',
+      import.meta.env.BASE_URL + '608957458_1388015189531242_8447060198789431145_n.jpg'
     ]
   },
   {
@@ -48,7 +48,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     year: '2024',
     category: 'residencial',
     categoryLabel: 'Residencial Alto Standing',
-    imageUrl: '/725153208_1487642689218128_819161186868229869_n.jpg',
+    imageUrl: import.meta.env.BASE_URL + '725153208_1487642689218128_819161186868229869_n.jpg',
     imageAlt: 'Monolithic luxury residence built from warm textured travertine stone blocks with warm architectural evening illumination, concrete entry steps, curving driveway with manicured circular lawn and illuminated tree under a dramatic sunset sky in Madrid',
     materialHighlight: 'TRAVERTINO AL CORTE',
     materialColor: 'bg-amber-400/80',
@@ -71,7 +71,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     has3DModel: true,
     modelKey: 'travertino',
     galleryImages: [
-      '/725153208_1487642689218128_819161186868229869_n.jpg'
+      import.meta.env.BASE_URL + '725153208_1487642689218128_819161186868229869_n.jpg'
     ]
   },
   {
@@ -83,7 +83,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     year: '2024',
     category: 'residencial',
     categoryLabel: 'Residencial Alto Standing',
-    imageUrl: '/725279091_1358169512825333_7700966943037890292_n.jpg',
+    imageUrl: import.meta.env.BASE_URL + '725279091_1358169512825333_7700966943037890292_n.jpg',
     imageAlt: 'Stunning ultra contemporary multi-story white architectural villa at twilight with fully glazed structural glass upper floor glowing warmly, lower travertine garage, suspended greenery planter box and an illuminated sheet waterfall fountain pouring into a reflection pool',
     materialHighlight: 'VIDRIO ESTRUCTURAL',
     materialColor: 'bg-cyan-400/80',
@@ -104,7 +104,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     has3DModel: true,
     modelKey: 'cristal',
     galleryImages: [
-      '/725279091_1358169512825333_7700966943037890292_n.jpg'
+      import.meta.env.BASE_URL + '725279091_1358169512825333_7700966943037890292_n.jpg'
     ]
   },
   {
@@ -116,7 +116,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     year: '2023',
     category: 'domotica',
     categoryLabel: 'Domótica & High-Tech',
-    imageUrl: '/725588653_1731047268076807_2055582365866218853_n.jpg',
+    imageUrl: import.meta.env.BASE_URL + '725588653_1731047268076807_2055582365866218853_n.jpg',
     imageAlt: 'High-tech brutalist luxury black mansion at dusk featuring matte black composite panels, cantilevered glass lounge with warm ambient lighting inside, illuminated minimalist concrete staircase and manicured topiary trees',
     materialHighlight: 'ALGORITMO DOMÓTICO IA',
     materialColor: 'bg-amber-500',
@@ -136,7 +136,7 @@ export const PROJECTS_DATA: ArchitecturalProject[] = [
     has3DModel: true,
     modelKey: 'domotica',
     galleryImages: [
-      '/725588653_1731047268076807_2055582365866218853_n.jpg'
+      import.meta.env.BASE_URL + '725588653_1731047268076807_2055582365866218853_n.jpg'
     ]
   }
 ];
