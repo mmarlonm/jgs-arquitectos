@@ -422,7 +422,7 @@ export default function App() {
             <div className="lg:col-span-5 relative">
               <div className="relative bg-[#292a2b] border border-[#949088]/30 overflow-hidden shadow-2xl">
                 <img
-                  src="/arqui-jose.jpg"
+                  src={`${import.meta.env.BASE_URL}arqui-jose.jpg`}
                   alt="Arq. José Garnica - Director Principal & Fundador JGS Arquitectos"
                   className="w-full aspect-[4/5] object-cover filter grayscale contrast-125 transition-transform duration-700 hover:scale-105"
                   referrerPolicy="no-referrer"
